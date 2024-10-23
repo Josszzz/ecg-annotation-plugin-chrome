@@ -292,7 +292,8 @@ export class EcgCanvas {
     setAnnotations(annotations: any[]) {
         // Start by clearing existing measures
         this.clearMeasures();
-
+        this.scrollRate = 25;
+        
         // Load them one by one
         for (const annotation of annotations) {
             if (annotation.type === "__scroll_rate") {

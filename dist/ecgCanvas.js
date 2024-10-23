@@ -250,6 +250,7 @@ var EcgCanvas = /** @class */ (function () {
     EcgCanvas.prototype.setAnnotations = function (annotations) {
         // Start by clearing existing measures
         this.clearMeasures();
+        this.scrollRate = 25;
         // Load them one by one
         for (var _i = 0, annotations_1 = annotations; _i < annotations_1.length; _i++) {
             var annotation = annotations_1[_i];
