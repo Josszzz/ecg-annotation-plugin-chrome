@@ -1,0 +1,118 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+}
+.buttonbar {
+    display: inline-flex;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 300px;
+    z-index: 100;
+    align-items: center;
+}
+div.buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border: none;
+    display: block;
+    user-select: none;
+    z-index: 100;
+}
+img.buttons {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #FFFD;
+}
+img.buttons:hover {
+    background-color: #FF0D;
+}
+
+div#canvas-container {
+    position: absolute;
+    height: 100%;
+}
+
+canvas#renderCanvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+canvas#measureCanvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #FFFFFF00;
+    pointer-events: none;
+    z-index: 2;
+}
+
+canvas#zoomCanvas {
+    position: absolute;
+    pointer-events: none;
+}
+
+div#zoomContainer {
+    position: absolute;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    pointer-events: none;
+    z-index: 100;
+    visibility: hidden;
+}
+
+div#measureContainer {
+    z-index: 3;
+}
+
+div.measureDiv {
+    position: absolute;
+    opacity: 0.5;
+    background-color: #FFF;
+    text-align: center;
+    pointer-events: none;
+    border: none;
+    padding: none;
+    user-select: none;
+}
+
+div#inputBar {
+    z-index: 100;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+}
+
+input#inputField {
+    width: 300px;
+}
+
+div.selector {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    text-align: center;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.hidden {
+    visibility: hidden;
+}

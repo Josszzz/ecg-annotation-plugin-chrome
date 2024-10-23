@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Liryc PDF ECG Viewer",
+    "version": "1.1",
+    "description": "View and annotate PDF ECGs",
+    "permissions": ["storage", "tabs", "scripting"],
+    "action": {
+      "default_title": "Open PDF ECG Viewer"
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liryc PDF ECG viewer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="selector">
+  <h2>Select a PDF ECG file</h2>
+  <button id="selectPdfButton">Select PDF File</button>
+  <input type="file" id="fileInput" accept="application/pdf" style="display: none;">
+  </div>
+
+  <div class="canvasContainer controls hidden">
+    <canvas id="renderCanvas"></canvas>
+    <canvas id="measureCanvas"></canvas>
+  </div>
+  <div class="controls hidden" id="zoomContainer">
+    <canvas id="zoomCanvas"></canvas>
+  </div>
+
+  <div id="measureContainer" class="controls hidden"></div>
+
+  <div class="buttonbar controls hidden">
+    <img src="/images/rotate.svg" width="20px", height="20px" id="cw-rotate" class="buttons">
+    <img src="/images/rotate.svg" width="20px" height="20px" id="ccw-rotate" class="buttons" style="transform: scaleX(-1);">
+    <img src="/images/arrow.svg" width="20px" height="20px" id="previous" class="buttons" style="transform: scaleX(-1);">
+    <input id="pageNum" width="30px" height="20px" style="width:30px; height:20px;">
+    <div id="numPages"></div>
+    <img src="/images/arrow.svg" width="20px" height="20px" id="next" class="buttons">
+    <img src="images/save.svg" width="20px" height="20px" id="save" class="buttons">
+  </div>
+
+  <div id="inputBar" class="controls hidden">
+    <input id="inputField">
+  </div>
+
+  <script type="module" src="ecg_viewer.mjs"></script>
+</body>
+</html>
