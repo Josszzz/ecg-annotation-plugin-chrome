@@ -163,6 +163,7 @@ var EcgCanvas = /** @class */ (function () {
     };
     EcgCanvas.prototype.clearMeasures = function () {
         // Clear measures
+        this.scrollRate = 25;
         for (var _i = 0, _a = this.measures; _i < _a.length; _i++) {
             var measure = _a[_i];
             measure.delete();
@@ -250,7 +251,6 @@ var EcgCanvas = /** @class */ (function () {
     EcgCanvas.prototype.setAnnotations = function (annotations) {
         // Start by clearing existing measures
         this.clearMeasures();
-        this.scrollRate = 25;
         // Load them one by one
         for (var _i = 0, annotations_1 = annotations; _i < annotations_1.length; _i++) {
             var annotation = annotations_1[_i];
